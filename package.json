@@ -1,0 +1,29 @@
+{
+  "name": "cv_aleksey-gorbunov_info",
+  "version": "1.0.0",
+  "description": "AlGo's personal site",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immarketing/cv_aleksey-gorbunov_info.git"
+  },
+  "keywords": [
+    "personal",
+    "site"
+  ],
+  "author": "AlGo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immarketing/cv_aleksey-gorbunov_info/issues"
+  },
+  "homepage": "https://github.com/immarketing/cv_aleksey-gorbunov_info#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^0.8.2"
+  }
+}
