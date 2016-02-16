@@ -1,0 +1,29 @@
+{
+  "name": "cv_aleksey-gorbunov_info",
+  "authors": [
+    "AVGorbunov <immarketing@yandex.ru>"
+  ],
+  "description": "Personal site for Aleksey Gorbunov",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "personal",
+    "site"
+  ],
+  "license": "MIT",
+  "homepage": "cv.aleksey-gorbunov.info",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6"
+  }
+}
