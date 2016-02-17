@@ -16,6 +16,18 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
             css: ['<%= globalConfig.styles %>/*'],
             fonts: ['<%= globalConfig.fonts %>/*']
         },
+        less: {
+            development: {
+                options: {
+                    compress: false,
+                    yuicompress: false,
+                    optimization: 2
+                },
+                files: {
+                    "css/cv.css": "less.src/cv.less"
+                }
+            }
+        },
         copy: {
             main: {
                 files: [{
@@ -29,6 +41,18 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                     flatten: true,
                     src: '<%= globalConfig.bower_path %>/bootstrap/dist/js/bootstrap.<%= globalConfig.minified %>js',
                     dest: '<%= globalConfig.scripts %>/',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    flatten: true,
+                    src: 'js.src/*.js',
+                    dest: 'js/',
+                    filter: 'isFile'
+                }, /* { expand : true, flatten : true, src : '<%= globalConfig.bower_path %>/html5shiv/dist/html5shiv.min.js', dest : '<%= globalConfig.scripts %>/', filter : 'isFile' }, */ {
+                    expand: true,
+                    flatten: true,
+                    src: 'css.src/*.css',
+                    dest: 'css/',
                     filter: 'isFile'
                 }, {
                     expand: true,
@@ -112,11 +136,12 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
      */
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     // Default task(s).
     // grunt.registerTask('default', [ 'uglify','less', 'watch' ]);
     // grunt.registerTask('default', [ 'uglify','less', 'bower_concat' ]);
-    grunt.registerTask('default', ['clean', 'copy']);
+    grunt.registerTask('default', ['clean', 'less', 'copy']);
     //grunt.registerTask('serverdeploy', ['default', 'ftp-deploy']);
 
     // 11

@@ -10,11 +10,52 @@
 @agVideoPortH: 400;
 @agVideoPortW: 650;
 
-@cvBGColor: #f4511e;
-@cvColor: #ffffff;
+// цветовая схема: http://colorscheme.ru/#5d11Tg0v9w0w0
+// ддля примера цветовую схему возьму здесь: http://xafari.ru/
 
-body .jumbotron {
-  background-color: @cvBGColor;
+@cvBGColor: #f4511e;
+@cvBGColor: #CB6586;
+// http://colorscheme.ru/#5o11Tg5sGw0w0
+@cvBGColor: #edb059;
+// http://colorscheme.ru/#0K11Tj-tKw0w0
+
+@cvColor: #ffffff;
+@cvColor: rgba(0, 0, 0, 0.6);
+
+@cvColor1: #edb059;
+@cvBGColor1: #81d742;
+
+.logo {
+  font-size-1234: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+
+body {
   color: @cvColor;
+
+  .logo-small {
+    //color: #f4511e;
+    font-size: 50px;
+  }
+
+  .logo {
+    //color: #f4511e;
+    font-size: 200px;
+  }
+
+  .jumbotron {
+    background-color: @cvBGColor;
+    color: @cvColor;
+    padding: 100px 25px;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
 }
 
