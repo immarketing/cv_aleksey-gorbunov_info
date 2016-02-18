@@ -20,16 +20,46 @@
 
     <link href="./css/cv.css" rel="stylesheet">
 </head>
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<div class="jumbotron text-center">
-    <h1>Алексей Горбунов</h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">AlGo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#comps">КОМПЕТЕНЦИИ</a></li>
+                <li><a href="#projects">ПРОЕКТЫ</a></li>
+                <li><a href="#texts">СТАТЬИ</a></li>
+                <li><a href="#CV">РЕЗЮМЕ</a></li>
+                <li><a href="#contacts">КОНТАКТЫ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron text-center ">
+
+<h1>Алексей Горбунов</h1>
+
 
     <p>Я специализируюсь на всем подряд просто безобразно</p>
 
 </div>
 
-<div class="container-fluid">
+<div class="container cv-fluid" id="comps">
+
+    <div class="cvtitle">
+        <h1>МОИ НАВЫКИ И ЗНАНИЯ</h1>
+    </div>
+
+
     <div class="row">
         <div class="col-sm-8">
             <h2>About Company Page</h2>
@@ -44,7 +74,7 @@
     </div>
 </div>
 
-<div class="container-fluid bg-grey">
+<div class="container cv-fluid bg-grey">
     <div class="row">
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-globe logo"></span>
@@ -55,6 +85,83 @@
 
             <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
         </div>
+    </div>
+</div>
+
+<div class="container cv-fluid text-center" id="projects">
+    <div class="cvtitle">
+        <h1 class="">ОПЫТ РАБОТЫ</h1>
+    </div>
+
+    <h4>Мои основные проекты</h4>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="cvProjectImagePlaceHolder">
+                <div class="cvVAlign">
+                    <img src="./images/askona-nrm.png" alt="Холдинговая компания АСКОНА" class="">
+                </div>
+            </div>
+
+
+            <h4>POWER</h4>
+
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="cvProjectImagePlaceHolder">
+                <div class="cvVAlign">
+                    <img src="./images/kzta-nrm.png" alt="Калужский завод телеграфной аппаратуры">
+                </div>
+            </div>
+            <h4>LOVE</h4>
+
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="cvProjectImagePlaceHolder">
+                <div class="cvVAlign">
+                    <img src="./images/nmz-nrm.png" alt="Нижегородский машиностроительный завод">
+                </div>
+            </div>
+
+            <h4>JOB DONE</h4>
+
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="cvProjectImagePlaceHolder">
+                <div class="cvVAlign">
+                    <img src="./images/szmn.png" alt="Северо-западные магистральные нефтепроводы">
+                </div>
+            </div>
+            <h4>POWER</h4>
+
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="cvProjectImagePlaceHolder">
+                <div class="cvVAlign">
+                    <img src="./images/szms.png" alt="Солнечногорский Завод Металлических Сеток">
+                </div>
+            </div>
+            <h4>LOVE</h4>
+
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+        <div class="col-sm-4">
+            <div class="cvProjectImagePlaceHolder">
+                <div class="cvVAlign">
+                    <img src="./images/tochmash-nrm.png" alt="ВПО Точмаш">
+                </div>
+            </div>
+            <h4>JOB DONE</h4>
+
+            <p>Lorem ipsum dolor sit amet..</p>
+        </div>
+
     </div>
 </div>
 
@@ -87,19 +194,19 @@
 
     <div class="row">
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <span class="glyphicon glyphicon-leaf logo-small logo-green"></span>
             <h4>GREEN</h4>
 
             <p>Lorem ipsum dolor sit amet..</p>
         </div>
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <span class="glyphicon glyphicon-certificate logo-small logo-green"></span>
             <h4>CERTIFIED</h4>
 
             <p>Lorem ipsum dolor sit amet..</p>
         </div>
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-wrench logo-small"></span>
+            <span class="glyphicon glyphicon-wrench logo-small logo-green"></span>
             <h4>HARD WORK</h4>
 
             <p>Lorem ipsum dolor sit amet..</p>
@@ -117,5 +224,28 @@
 
 </script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 900, function () {
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        });
+    })
+</script>
 </body>
 </html>

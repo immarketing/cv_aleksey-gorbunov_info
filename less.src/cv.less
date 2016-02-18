@@ -23,7 +23,7 @@
 @cvColor: rgba(0, 0, 0, 0.6);
 
 @cvColor1: #edb059;
-@cvBGColor1: #81d742;
+@cvColorGreen: #81d742;
 
 .logo {
   font-size-1234: 200px;
@@ -40,8 +40,19 @@ body {
   color: @cvColor;
 
   .logo-small {
-    //color: #f4511e;
+    color: @cvColorGreen;
     font-size: 50px;
+    border-radius: 50%;
+    padding: 20px;
+    border: solid 5px;
+  }
+
+  .logo-green {
+    color: whitesmoke;
+    background-color: @cvColorGreen;
+    padding: 25px;
+    border-radius: 50%;
+    border: 0px;
   }
 
   .logo {
@@ -52,10 +63,89 @@ body {
   .jumbotron {
     background-color: @cvBGColor;
     color: @cvColor;
-    padding: 100px 25px;
+    padding: 50px 25px;
   }
   .container-fluid {
     padding: 60px 50px;
+  }
+
+  .cv-fluid {
+    padding: 50px 50px;
+  }
+
+  .cvtitle {
+    .cvTextSpaced;
+
+    h1 {
+      text-transform: uppercase;
+      //color: #564d93;
+      display: table-cell;
+      //font: 56px PFDinDisplayProExtraThin, sans-serif;
+      padding: 0 40px;
+      white-space: nowrap;
+      //line-height: 1;
+    }
+  }
+
+  .cvtitle:before, .cvtitle:after {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAEklEQVR4XgXAgQgAAAAAoP2pjwACAAF0O1JHAAAAAElFTkSuQmCC") repeat-x scroll 0 50% rgba(255, 0, 0, 0);
+    content: "";
+    display: table-cell;
+    width: 50%;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    //background-color: #f4511e;
+    background-color: @cvBGColor;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 3px;
+    border-radius: 0;
+
+    li a, .navbar-brand {
+      color: #fff !important;
+    }
+    li a:hover, li.active a {
+      //color: #f4511e !important;
+      color: @cvBGColor !important;
+      background-color: #fff !important;
+    }
+  }
+
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+
+  .cvTextSpaced {
+    letter-spacing: 3px;
+  }
+
+  .cvProjectImagePlaceHolder {
+    display: table;
+    width: 210px;
+    height: 180px;
+    margin: auto;
+    .cvVAlign {
+      display: table-cell;
+      vertical-align: middle;
+      border: 3px;
+      border-style: none;
+      border-radius: 20px;
+      //cursor: hand;
+      &:hover {
+        //border-radius: 20px;
+        border-style: solid;
+        cursor: pointer;
+      }
+      img {
+        width: 180px;
+        //height: 162px;
+      }
+    }
   }
 }
 

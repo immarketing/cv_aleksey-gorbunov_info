@@ -28,6 +28,37 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                 }
             }
         },
+        image_resize: {
+            resize: {
+                options: {
+                    width: 200,
+                    //height: 100,
+                    overwrite: true
+                },
+                src: 'images.src/*.png',
+                dest: 'images/'
+            }
+        },
+
+        responsive_images: {
+            myTask: {
+                options: {
+                    engine: 'gm',
+                    sizes: [{
+                        name: 'nrm',
+                        width: 180,
+                        suffix: "",
+                        //height: 240
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**.{jpg,gif,png}'],
+                    cwd: 'images.src/',
+                    dest: 'images/'
+                }]
+            }
+        },
         copy: {
             main: {
                 files: [{
@@ -53,6 +84,12 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                     flatten: true,
                     src: 'css.src/*.css',
                     dest: 'css/',
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    flatten: true,
+                    src: 'images.src/*',
+                    dest: 'images/',
                     filter: 'isFile'
                 }, {
                     expand: true,
@@ -137,11 +174,14 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-image-resize');
+    grunt.loadNpmTasks('grunt-responsive-images');
 
     // Default task(s).
     // grunt.registerTask('default', [ 'uglify','less', 'watch' ]);
     // grunt.registerTask('default', [ 'uglify','less', 'bower_concat' ]);
-    grunt.registerTask('default', ['clean', 'less', 'copy']);
+    grunt.registerTask('default', ['clean', 'less', 'copy', 'responsive_images']);
+    grunt.registerTask('imagetest', ['responsive_images']);
     //grunt.registerTask('serverdeploy', ['default', 'ftp-deploy']);
 
     // 11
