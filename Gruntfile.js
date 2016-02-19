@@ -59,6 +59,16 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                 }]
             }
         },
+
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>\n'
+            },
+            build: {
+                src: 'js.src/cv.js',
+                dest: 'js/cv.min.js'
+            }
+        },
         copy: {
             main: {
                 files: [{
@@ -165,7 +175,6 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
 
     // Load the plugin that provides the "uglify" task.
     /*
-     grunt.loadNpmTasks('grunt-contrib-uglify');
      grunt.loadNpmTasks('grunt-bower-concat');
      grunt.loadNpmTasks('grunt-contrib-clean');
      grunt.loadNpmTasks('grunt-ftp-upload');
@@ -174,13 +183,15 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-image-resize');
+    //grunt.loadNpmTasks('grunt-image-resize');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task(s).
     // grunt.registerTask('default', [ 'uglify','less', 'watch' ]);
     // grunt.registerTask('default', [ 'uglify','less', 'bower_concat' ]);
-    grunt.registerTask('default', ['clean', 'less', 'copy', 'responsive_images']);
+    grunt.registerTask('default', ['clean', 'less', 'copy', 'uglify', 'responsive_images']);
     grunt.registerTask('imagetest', ['responsive_images']);
     //grunt.registerTask('serverdeploy', ['default', 'ftp-deploy']);
 

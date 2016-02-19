@@ -96,10 +96,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
+                <h4 class="modal-title">название проекта</h4>
             </div>
             <div class="modal-body">
-                <p>Some text in the modal.</p>
 
                 <div class="table-responsive">
                     <table class="table table-responsive table-striped cvProjectInfoTable">
@@ -154,7 +153,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
             </div>
         </div>
 
@@ -163,73 +162,73 @@
 
 <div class="container cv-fluid text-center" id="projects">
     <div class="cvtitle">
-        <h1 class="">ОПЫТ РАБОТЫ</h1>
+        <h1 class="">проекты</h1>
     </div>
-
-    <h4>Мои основные проекты</h4>
-
+    <!--
+        <h4>Мои основные проекты</h4>
+    -->
     <div class="row">
         <div class="col-sm-4">
             <a data-toggle="modal" data-target="#myModal">
-            <div class="cvProjectImagePlaceHolder">
-                <div class="cvVAlign">
-                    <img src="./images/askona-nrm.png" alt="Холдинговая компания АСКОНА" class="">
+                <div class="cvProjectImagePlaceHolder">
+                    <div class="cvVAlign">
+                        <img src="./images/askona-nrm.png" alt="Холдинговая компания АСКОНА" class="">
+                    </div>
                 </div>
-            </div>
             </a>
 
         </div>
         <div class="col-sm-4">
             <a data-toggle="modal" data-target="#myModal">
-            <div class="cvProjectImagePlaceHolder">
-                <div class="cvVAlign">
-                    <img src="./images/kzta-nrm.png" alt="Калужский завод телеграфной аппаратуры">
+                <div class="cvProjectImagePlaceHolder">
+                    <div class="cvVAlign">
+                        <img src="./images/kzta-nrm.png" alt="Калужский завод телеграфной аппаратуры">
+                    </div>
                 </div>
-            </div>
             </a>
         </div>
         <div class="col-sm-4">
-            <div class="cvProjectImagePlaceHolder">
-                <div class="cvVAlign">
-                    <img src="./images/nmz-nrm.png" alt="Нижегородский машиностроительный завод">
+            <a data-toggle="modal" data-target="#myModal">
+                <div class="cvProjectImagePlaceHolder">
+                    <div class="cvVAlign">
+                        <img src="./images/nmz-nrm.png" alt="Нижегородский машиностроительный завод">
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
-                Подробнее...
-            </button>
+
         </div>
     </div>
     <div class="row">
         <div class="col-sm-4">
-            <div class="cvProjectImagePlaceHolder">
-                <div class="cvVAlign">
-                    <img src="./images/szmn.png" alt="Северо-западные магистральные нефтепроводы">
+            <a data-toggle="modal" data-target="#myModal">
+                <div class="cvProjectImagePlaceHolder">
+                    <div class="cvVAlign">
+                        <img src="./images/szmn.png" alt="Северо-западные магистральные нефтепроводы">
+                    </div>
                 </div>
-            </div>
-            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
-                Подробнее...
-            </button>
+            </a>
+
         </div>
         <div class="col-sm-4">
-            <div class="cvProjectImagePlaceHolder">
-                <div class="cvVAlign">
-                    <img src="./images/szms.png" alt="Солнечногорский Завод Металлических Сеток">
+            <a data-toggle="modal" data-target="#myModal">
+                <div class="cvProjectImagePlaceHolder">
+                    <div class="cvVAlign">
+                        <img src="./images/szms.png" alt="Солнечногорский Завод Металлических Сеток">
+                    </div>
                 </div>
-            </div>
-            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
-                Подробнее...
-            </button>
+            </a>
+
         </div>
         <div class="col-sm-4">
-            <div class="cvProjectImagePlaceHolder">
-                <div class="cvVAlign">
-                    <img src="./images/tochmash-nrm.png" alt="ВПО Точмаш">
+            <a data-toggle="modal" data-target="#myModal">
+                <div class="cvProjectImagePlaceHolder">
+                    <div class="cvVAlign">
+                        <img src="./images/tochmash-nrm.png" alt="ВПО Точмаш">
+                    </div>
                 </div>
-            </div>
-            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
-                Подробнее...
-            </button>
+            </a>
+
         </div>
 
     </div>
@@ -284,6 +283,24 @@
     </div>
 </div>
 
+<div class="container-fluid bg-grey" id="contacts">
+
+    <div class="cvtitle">
+        <h1 class="">контакты</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <p>Звоните, пишите...</p>
+            <!-- <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p> -->
+            <p><span class="glyphicon glyphicon-phone"></span> +7 920 624 93 17</p>
+
+            <p><span class="glyphicon glyphicon-envelope"></span>info@aleksey-gorbunov.info</p>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+
 <script>
     var minified = ''; // min.
     window.jQuery
@@ -294,28 +311,6 @@
 
 </script>
 <script src="./js/ie10-viewport-bug-workaround.js"></script>
-<script>
-    $(document).ready(function () {
-        // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 900, function () {
-
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-        });
-    })
-</script>
+<script src="./js/cv.js"></script>
 </body>
 </html>
