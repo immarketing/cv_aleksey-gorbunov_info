@@ -25,6 +25,11 @@
 @cvColor1: #edb059;
 @cvColorGreen: #81d742;
 
+@cvColorL : lighten(@cvColor, 30%);
+@cvColorLL : lighten(@cvColorL, 30%);
+@cvColorLLL : lighten(@cvColorLL, 30%);
+
+
 .logo {
   font-size-1234: 200px;
 }
@@ -35,6 +40,7 @@
     margin: 25px 0;
   }
 }
+
 
 body {
   color: @cvColor;
@@ -132,8 +138,7 @@ body {
     .cvVAlign {
       display: table-cell;
       vertical-align: middle;
-      border: 3px;
-      border-style: none;
+      border: 3px none;
       border-radius: 20px;
       //cursor: hand;
       &:hover {
@@ -146,6 +151,30 @@ body {
         //height: 162px;
       }
     }
+  }
+
+  .cvProjectInfoTable {
+    .glyphicon {
+      color: @cvColorGreen;
+      font-size: 3em;
+    }
+  }
+
+  .cvEmposed {
+    letter-spacing: -0.65em;
+    .glyphicon {
+      top: 0px;
+    }
+    span {
+      color: @cvColorL;
+      span {
+        color: @cvColorLL;
+        span {
+          color: @cvColorLL;
+        }
+      }
+    }
+
   }
 }
 

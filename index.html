@@ -46,12 +46,13 @@
 
 <div class="jumbotron text-center ">
 
-<h1>Алексей Горбунов</h1>
+    <h1>Алексей Горбунов</h1>
 
 
     <p>Я специализируюсь на всем подряд просто безобразно</p>
 
 </div>
+
 
 <div class="container cv-fluid" id="comps">
 
@@ -88,6 +89,78 @@
     </div>
 </div>
 
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-responsive table-striped cvProjectInfoTable">
+                        <!--
+                        <thead>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                        </tr>
+                        </thead>
+                        -->
+                        <tbody>
+                        <tr>
+                            <td>
+                    <span class="cvEmposed">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span class="glyphicon glyphicon-user"></span>
+                    </span>
+                                <br><span>Персонал под управлением</span>
+                            </td>
+                            <td>asdadfbs</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="glyphicon glyphicon-calendar"></span> <br>
+                                <span>Сроки проекта</span>
+                            </td>
+                            <td>asdadfbs</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="glyphicon glyphicon-tags"></span> <br>
+                                <span>Описание объекта</span>
+                            </td>
+                            <td>asdadfbs</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="glyphicon glyphicon-flag"></span> <br>
+                                <span>Результаты</span>
+                            </td>
+                            <td>asdadfbs</td>
+
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <div class="container cv-fluid text-center" id="projects">
     <div class="cvtitle">
         <h1 class="">ОПЫТ РАБОТЫ</h1>
@@ -97,26 +170,23 @@
 
     <div class="row">
         <div class="col-sm-4">
+            <a data-toggle="modal" data-target="#myModal">
             <div class="cvProjectImagePlaceHolder">
                 <div class="cvVAlign">
                     <img src="./images/askona-nrm.png" alt="Холдинговая компания АСКОНА" class="">
                 </div>
             </div>
+            </a>
 
-
-            <h4>POWER</h4>
-
-            <p>Lorem ipsum dolor sit amet..</p>
         </div>
         <div class="col-sm-4">
+            <a data-toggle="modal" data-target="#myModal">
             <div class="cvProjectImagePlaceHolder">
                 <div class="cvVAlign">
                     <img src="./images/kzta-nrm.png" alt="Калужский завод телеграфной аппаратуры">
                 </div>
             </div>
-            <h4>LOVE</h4>
-
-            <p>Lorem ipsum dolor sit amet..</p>
+            </a>
         </div>
         <div class="col-sm-4">
             <div class="cvProjectImagePlaceHolder">
@@ -125,9 +195,9 @@
                 </div>
             </div>
 
-            <h4>JOB DONE</h4>
-
-            <p>Lorem ipsum dolor sit amet..</p>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                Подробнее...
+            </button>
         </div>
     </div>
     <div class="row">
@@ -137,9 +207,9 @@
                     <img src="./images/szmn.png" alt="Северо-западные магистральные нефтепроводы">
                 </div>
             </div>
-            <h4>POWER</h4>
-
-            <p>Lorem ipsum dolor sit amet..</p>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                Подробнее...
+            </button>
         </div>
         <div class="col-sm-4">
             <div class="cvProjectImagePlaceHolder">
@@ -147,9 +217,9 @@
                     <img src="./images/szms.png" alt="Солнечногорский Завод Металлических Сеток">
                 </div>
             </div>
-            <h4>LOVE</h4>
-
-            <p>Lorem ipsum dolor sit amet..</p>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                Подробнее...
+            </button>
         </div>
         <div class="col-sm-4">
             <div class="cvProjectImagePlaceHolder">
@@ -157,9 +227,9 @@
                     <img src="./images/tochmash-nrm.png" alt="ВПО Точмаш">
                 </div>
             </div>
-            <h4>JOB DONE</h4>
-
-            <p>Lorem ipsum dolor sit amet..</p>
+            <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                Подробнее...
+            </button>
         </div>
 
     </div>
