@@ -29,7 +29,6 @@
 @cvColorLL : lighten(@cvColorL, 30%);
 @cvColorLLL : lighten(@cvColorLL, 30%);
 
-
 .logo {
   font-size-1234: 200px;
 }
@@ -41,9 +40,10 @@
   }
 }
 
-
 body {
   color: @cvColor;
+  font-family: 'Open Sans', sans-serif;
+  //font-family: 'Open Sans Condensed', sans-serif;
 
   div#myModal {
     h4.modal-title {
@@ -182,6 +182,89 @@ body {
       }
     }
 
+  }
+
+  div#contacts {
+    h2 {
+      display: inline;
+      padding-top: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      white-space: nowrap;
+      font-size: 1.5em;
+    }
+    .cvtitle {
+      padding-bottom: 20px;
+    }
+
+    margin-bottom: 50px;
+  }
+
+  .carousel-control {
+    .right, .left {
+      background-image: none;
+      color: #f4511e;
+    }
+
+    .carousel-indicators {
+      li {
+        border-color: #f4511e;
+      }
+
+      li.active {
+        background-color: #f4511e;
+      }
+    }
+
+    .item {
+      h4 {
+        font-size: 19px;
+        line-height: 1.375em;
+        font-weight: 400;
+        font-style: italic;
+        margin: 70px 0;
+      }
+
+      span {
+        font-style: normal;
+      }
+    }
+
+    .slideanim {
+      visibility: hidden;
+    }
+    .slide {
+      /* The name of the animation */
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      /* The duration of the animation */
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      /* Make the element visible */
+      visibility: visible;
+    }
+
+    /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
+    @-webkit-keyframes slide {
+      0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+      }
+    }
   }
 }
 
