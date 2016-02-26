@@ -14,6 +14,13 @@ function getCVProjectsData() {
 }
 
 $(document).ready(function () {
+    $('#cv_navbar').on('activate.bs.scrollspy', function () {
+        var currentItem = $(".nav li.active > a").text();
+        console.log("Сейчас вы находитесь - " + currentItem);
+    });
+    $('body').each(function () {
+        var $spy = $(this).scrollspy('refresh')
+    });
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
 
@@ -35,6 +42,7 @@ $(document).ready(function () {
     });
 });
 
+
 $(window).scroll(function () {
     $(".slideanim").each(function () {
         var pos = $(this).offset().top;
@@ -45,3 +53,4 @@ $(window).scroll(function () {
         }
     });
 });
+
