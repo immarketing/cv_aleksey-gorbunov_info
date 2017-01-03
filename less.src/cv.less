@@ -2,6 +2,8 @@
 //@import "fonts.css";
 
 //@import "elements.less";
+@import "bootstrap.less";
+//@import "buttons.less";
 
 @font-family-sans-serif: 'Open Sans', sans-serif;
 
@@ -182,6 +184,16 @@ body {
       }
     }
 
+  }
+
+  div#compList {
+    button {
+      .btn;
+      .btn-default;
+      .btn-sm;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
   }
 
   div#contacts {

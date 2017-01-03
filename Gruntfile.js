@@ -19,6 +19,7 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
         less: {
             development: {
                 options: {
+                    paths: ['assets/css', 'bower_components/bootstrap/less'],
                     compress: false,
                     yuicompress: false,
                     optimization: 2
