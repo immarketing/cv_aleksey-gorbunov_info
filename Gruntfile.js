@@ -115,7 +115,6 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                 }
             }
         },
-
         ftp_push: {
             dist_cv_gorbunov_aleksey_ru: {
                 options: {
@@ -134,6 +133,7 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                         src: [
                             "index.html",
                             '*.ver',
+                            '.ver',
                             "css/**",
                             "fonts/**",
                             "images/**",
