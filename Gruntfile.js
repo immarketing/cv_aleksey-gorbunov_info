@@ -67,7 +67,7 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
 
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>\n'
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>*/\n'
             },
             dist: {
                 files: [{
@@ -141,7 +141,36 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
                         ]
                     }
                 ]
+            },
+            dist_www_gorbunov_aleksey_ru: {
+                options: {
+                    //authKey: "serverA",
+                    username: "ftpwwwalgouser",
+                    password: "I60r22i29P58i38sFG",
+                    host: "www.aleksey-gorbunov.info",
+                    debug: true,
+                    incrementalUpdates: false,
+                    dest: "/",
+                    port: 21
+                },
+                files: [
+                    {
+                        expand: true,
+                        //cwd: '.',
+                        cwd: '<%= globalConfig.distr %>/',
+                        src: [
+                            "index.html",
+                            '*.ver',
+                            '.ver',
+                            "css/**",
+                            "fonts/**",
+                            "images/**",
+                            "js/**"
+                        ]
+                    }
+                ]
             }
+
         }
         ,
 
@@ -348,7 +377,7 @@ module.exports = function (grunt) { /*require('jit-grunt')(grunt);*/
         //, 'file-creator:dist'
     ]);
 
-    grunt.registerTask('serverdeploy', ['prepareserverdeploy', 'gittag:dist', 'ftp_push:dist_cv_gorbunov_aleksey_ru']);
+    grunt.registerTask('serverdeploy', ['prepareserverdeploy', 'gittag:dist', 'ftp_push:dist_www_gorbunov_aleksey_ru']);
 
 
 
