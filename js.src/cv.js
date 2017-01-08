@@ -43,6 +43,19 @@ $(document).ready(function () {
     //$("#compList > button").addClass("btn btn-default btn-sm");
 });
 
+$(document).ready(function () {
+    $("#txtPlaceholder").on("hide.bs.collapse", function () {
+        $("#txtOpener").html('<span class="glyphicon glyphicon-collapse-down"></span> Показать');
+    });
+    $("#txtPlaceholder").on("show.bs.collapse", function () {
+        $("#txtOpener").html('<span class="glyphicon glyphicon-collapse-up"></span> Скрыть');
+    });
+});
+
+$(document).ready(function () {
+    $('[data-toggle="popover"]').popover();
+});
+
 
 $(window).scroll(function () {
     $(".slideanim").each(function () {
